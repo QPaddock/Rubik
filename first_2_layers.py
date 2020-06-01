@@ -9,9 +9,9 @@ def do_first_2_layers(cube):
         max = 0
         maxi = ""
         for i in crawl.crawl:
-            tcol = [x[:] for x in cube]
-            moves.make_moves(i, tcol)
-            hap = happiness(tcol, i)
+            temp_cube = [x[:] for x in cube]
+            moves.make_moves(i, temp_cube)
+            hap = happiness(temp_cube, i)
             if hap >= max:
                 max = hap
                 maxi = i
