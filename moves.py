@@ -6,7 +6,7 @@ temp_cube = [["" for i in range(12)] for j in range(9)]
 def make_moves(mix, cube):
     if valid_mix(mix) == False:
         print("Invalid Mix...")
-        return
+        exit(0)
 
     for twist in mix.split():
         if twist == "R":
@@ -74,7 +74,6 @@ def valid_mix(mix):
                 and twist != "R2" and twist != "L2" and twist != "F2"
                 and twist != "B2" and twist != "U2" and twist != "D2"):
             return False
-
     return True
 
 
